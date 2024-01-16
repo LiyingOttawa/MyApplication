@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.LiyingsAndroidLabs" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.LiyingsAndroidLabs" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
-         <item name="colorPrimary">@color/my_primary</item>
+         <item name="colorPrimary">#F44336</item>
 
         <!-- Second brand color. -->
-        <item name="colorSecondary">@color/my_secondary</item>
+        <item name="colorSecondary">#673AB7</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/my_statusbar</item>
