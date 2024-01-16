@@ -9,5 +9,10 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/my_statusbar</item>
+
+        <!-- text color. -->
+        <item name="android:textColor">@color/my_text</item>
     </style>
+
+
 </resources>
