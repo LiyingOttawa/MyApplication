@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
+import android.widget.Switch;
+import android.widget.CheckBox;
 
 import algonquin.cst2335.guo00079.R;
 import algonquin.cst2335.guo00079.data.MainViewModel;
@@ -49,5 +51,23 @@ public class MainActivity extends AppCompatActivity {
         variableBinding.mySwitch.setOnClickListener( click->{
             Toast.makeText(context,"mySwitch on: " + ((CompoundButton)click).isChecked() ,Toast.LENGTH_LONG).show();
         });
+
+        CheckBox checkBox = variableBinding.myCheckBox;
+        Switch switchButton = variableBinding.mySwitch;
+        RadioButton radioButton = variableBinding.myRadioButton;
+
+        model.isSelected.observe(this, selected -> {
+            variableBinding.myCheckBox.setChecked(selected);
+            variableBinding.mySwitch.setChecked(selected);
+            variableBinding.myRadioButton.setChecked(selected);
+        });
+        checkBox.setOnCheckedChangeListener(checkedChangeListener);
+        switchButton.setOnCheckedChangeListener(checkedChangeListener);
+        radioButton.setOnCheckedChangeListener(checkedChangeListener);
     }
+
+    private final CompoundButton.OnCheckedChangeListener checkedChangeListener = (buttonView, isChecked) -> {
+        model.getIsSelected().setValue(isChecked);
+    };
+
 }
