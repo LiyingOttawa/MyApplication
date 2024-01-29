@@ -2,4 +2,8 @@
     <string name="app_name">Liying\'s Android Labs</string>
     <string name="hello_message">Hello world!</string>
     <string name="button_message">I\'m a button</string>
+    <string name="spin_message">Spin flag</string>
+    <string name="button1">button</string>
+    <string name="button2">button</string>
+    <string name="button3">button</string>
 </resources>
