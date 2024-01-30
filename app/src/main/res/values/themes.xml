@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.LiyingsAndroidLabs" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
-         <item name="colorPrimary">#F44336</item>
+         <item name="colorPrimary">#673AB7</item>
 
         <!-- Second brand color. -->
-        <item name="colorSecondary">#673AB7</item>
+        <item name="colorSecondary">#FFEB3B</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/my_statusbar</item>
