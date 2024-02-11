@@ -2,4 +2,10 @@
     <string name="app_name">Liying\'s Android Labs</string>
     <string name="hello_message">Hello world!</string>
     <string name="button_message">I\'m a button</string>
+    <string name="enter_your_email_address">Enter your email address:</string>
+    <string name="type_email_here">Type email here</string>
+    <string name="type_your_password">Type your password</string>
+    <string name="login">Login</string>
+    <string name="call_number">CALL NUMBER</string>
+    <string name="change_picture">CHANGE PICTURE</string>
 </resources>

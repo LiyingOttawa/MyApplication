@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "algonquin.cst2335.guo00079"
-        minSdk = 27
+        minSdk = 22
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
