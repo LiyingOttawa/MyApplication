@@ -52,6 +52,7 @@ SecondActivity extends AppCompatActivity {
             Intent call = new Intent(Intent.ACTION_DIAL);
             String phoneNumber= phoneNumberEditText.getText().toString();
             call.setData(Uri.parse("tel:" + phoneNumber));
+            startActivity(call);
         });
         ActivityResultLauncher<Intent> cameraResult = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -84,6 +85,7 @@ SecondActivity extends AppCompatActivity {
                     }
                 });
         changePictureButton.setOnClickListener(clk->{
+
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
             cameraResult.launch(cameraIntent);

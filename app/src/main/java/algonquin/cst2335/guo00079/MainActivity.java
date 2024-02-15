@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             Intent nextPage = new Intent( MainActivity.this, SecondActivity.class);
             nextPage.putExtra(KEY_EMAIL_ADDRESS, emailEditText.getText().toString() );
             startActivity( nextPage);
+
             editor.putString(KEY_EMAIL_ADDRESS, emailEditText.getText().toString());
             editor.apply();
         } );

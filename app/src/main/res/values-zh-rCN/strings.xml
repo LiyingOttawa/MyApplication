@@ -3,4 +3,10 @@
     <string name="app_name">Liying\'s Android Labs</string>
     <string name="hello_message">你好，世界！</string>
     <string name="button_message">我是按钮</string>
+    <string name="enter_your_email_address">输入你的邮箱地址:</string>
+    <string name="type_email_here">输入邮箱</string>
+    <string name="type_your_password">输入密码</string>
+    <string name="login">登入</string>
+    <string name="call_number">打电话</string>
+    <string name="change_picture">换图片</string>
 </resources>
