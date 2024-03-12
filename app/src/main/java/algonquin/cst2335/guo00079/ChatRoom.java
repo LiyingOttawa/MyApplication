@@ -24,7 +24,6 @@ public class ChatRoom extends AppCompatActivity {
     ActivityChatRoomBinding binding;
     ArrayList<ChatMessage> messages;
     ChatRoomViewModel chatModel;
-
     private RecyclerView.Adapter myAdapter;
 
     private SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyy hh-mm-ss a");
