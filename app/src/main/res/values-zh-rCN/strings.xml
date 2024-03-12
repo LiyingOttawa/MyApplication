@@ -3,4 +3,8 @@
     <string name="app_name">Liying\'s Android Labs</string>
     <string name="hello_message">你好，世界！</string>
     <string name="button_message">我是按钮</string>
+    <string name="message">输入信息</string>
+    <string name="time">输入时间</string>
+    <string name="button_send">发送</string>
+    <string name="button_receive">接收</string>
 </resources>

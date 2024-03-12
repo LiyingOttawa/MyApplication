@@ -2,4 +2,9 @@
     <string name="app_name">Liying\'s Android Labs</string>
     <string name="hello_message">Hello world!</string>
     <string name="button_message">I\'m a button</string>
+
+    <string name="message">Message goes here</string>
+    <string name="time">Time goes here</string>
+    <string name="button_send">SEND</string>
+    <string name="button_receive">RECEIVE</string>
 </resources>
