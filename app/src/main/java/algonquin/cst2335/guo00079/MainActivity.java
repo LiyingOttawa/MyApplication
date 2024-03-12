@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
     }
     /***
      * password should have a digit, an upper case, a lower case, and a special character.
-     *
      * Regx:
      * (?=.*[0-9]): At least one digit.
      * (?=.*[a-z]): At least one lowercase letter.
@@ -61,9 +60,76 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean checkPasswordComplexity(String password) {
         // Define the regex pattern
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!*]).{1,}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(password);
-        return matcher.matches();
+//        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!*]).{1,}$";
+//        Pattern pattern = Pattern.compile(regex);
+//        Matcher matcher = pattern.matcher(password);
+//        return matcher.matches();
+        boolean foundUpperCase, foundLowerCase, foundNumber, foundSpecial;
+
+        foundUpperCase = foundLowerCase = foundNumber = foundSpecial = false;
+        for(char c:password.toCharArray())
+        {
+            if(!foundUpperCase)//only found once
+            {
+                foundUpperCase = isUpperCase(c);
+            }
+
+            if(!foundLowerCase)
+            {
+                foundLowerCase = isLowerCase(c);
+            }
+
+            if(!foundNumber)
+            {
+                foundNumber = isDigit(c);
+            }
+
+            if(!foundSpecial)
+            {
+                foundSpecial = isSpecialCharacter(c);
+            }
+        }
+        if(!foundUpperCase)
+        {
+            Toast.makeText(this,"missing an upper case letter",Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        else if( !foundLowerCase)
+        {
+            Toast.makeText(this,"missing a lower case letter",Toast.LENGTH_LONG).show();
+
+            return false;
+        }
+
+        else if( !foundNumber) {
+            Toast.makeText(this,"missing a number",Toast.LENGTH_LONG).show();
+
+            return false;
+        }
+        else if(! foundSpecial) {
+            Toast.makeText(this,"missing a special Character",Toast.LENGTH_LONG).show();
+
+            return false;
+        }
+        else return true; //only get here if they're all true
+    }
+
+    private static boolean isDigit( char c )
+    {
+        return Character.isDigit(c);
+    }
+    private static boolean isUpperCase(char c){
+        return Character.isUpperCase(c);
+    }
+    private static boolean isLowerCase(char c)
+    {
+        return Character.isLowerCase(c);
+    }
+
+    private static boolean isSpecialCharacter(char c)
+    {
+        String allowSpecialChars="@#$%^&+=!*";
+        return allowSpecialChars.contains(String.valueOf(c));
     }
 }
