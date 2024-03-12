@@ -60,10 +60,6 @@ public class ChatRoom extends AppCompatActivity {
             @NonNull
             @Override
             public MyRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                SentMessageBinding binding= SentMessageBinding.inflate(getLayoutInflater());
-//                return new MyRowHolder(binding.getRoot());
-
-                View view;
                 switch (viewType) {
                     case 0:
                         // Inflate send_message layout
