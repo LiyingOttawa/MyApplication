@@ -9,9 +9,10 @@
         android:id="@+id/messageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="@string/message"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_editor_absoluteY="84dp" />
 
     <TextView
         android:id="@+id/timeText"
@@ -19,15 +20,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/messageText"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:text="@string/time"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/messageText" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="94dp"
-        android:layout_height="106dp"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/sender"
         tools:layout_editor_absoluteY="74dp" />
