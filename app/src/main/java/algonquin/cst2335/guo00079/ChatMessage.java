@@ -12,6 +12,7 @@ public class ChatMessage {
     protected String timeSent;
     @ColumnInfo(name="SendOrReceive")
     protected int sendOrReceive;
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name="id")
     public int id;
@@ -44,6 +45,10 @@ public class ChatMessage {
 
     public void setTimeSent(String timeSent) {
         this.timeSent = timeSent;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
 

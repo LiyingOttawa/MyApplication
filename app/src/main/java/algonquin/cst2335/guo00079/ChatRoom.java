@@ -64,16 +64,40 @@ public class ChatRoom extends AppCompatActivity {
 
         binding.sendButton.setOnClickListener(click->{
             String currentDateAndTime = sdf.format(new Date());
-            messages.add(new ChatMessage(binding.textInput.getText().toString(),currentDateAndTime, 1));
-            myAdapter.notifyItemInserted(messages.size()-1);
-            binding.textInput.setText("");
+
+            Executor thread = Executors.newSingleThreadExecutor();
+            thread.execute(() ->
+            {
+                ChatMessage newMsg = new ChatMessage(binding.textInput.getText().toString(),currentDateAndTime, 1);
+                long id = mDAO.insertMessage(newMsg);
+                newMsg.setId((int)id);
+
+                runOnUiThread( () ->  {
+                    messages.add(newMsg);
+                    myAdapter.notifyItemInserted(messages.size()-1);
+                    binding.textInput.setText("");
+                }); //You can then load the RecyclerView
+            });
+
+
         });
 
         binding.receiveButton.setOnClickListener(click->{
             String currentDateAndTime = sdf.format(new Date());
-            messages.add(new ChatMessage(binding.textInput.getText().toString(),currentDateAndTime, 0));
-            myAdapter.notifyItemInserted(messages.size()-1);
-            binding.textInput.setText("");
+
+            Executor thread = Executors.newSingleThreadExecutor();
+            thread.execute(() ->
+            {
+                ChatMessage newMsg = new ChatMessage(binding.textInput.getText().toString(), currentDateAndTime, 0);
+                long id = mDAO.insertMessage(newMsg);
+                newMsg.setId((int) id);
+
+                runOnUiThread(() -> {
+                    messages.add(newMsg);
+                    myAdapter.notifyItemInserted(messages.size() - 1);
+                    binding.textInput.setText("");
+                }); //You can then load the RecyclerView
+            });
         });
 
         binding.recycleView.setAdapter(myAdapter= new RecyclerView.Adapter<MyRowHolder>() {
