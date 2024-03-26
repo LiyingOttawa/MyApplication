@@ -7,4 +7,11 @@
     <string name="time">输入时间</string>
     <string name="button_send">发送</string>
     <string name="button_receive">接收</string>
+    <string name="delete_message1">确认要删除这条信息吗：</string>
+    <string name="question">问题：</string>
+    <string name="undo">撤回</string>
+    <string name="button_login">登入</string>
+    <string name="toast_msg">Version 1.0, 创建于郭丽颖</string>
+    <string name="title1">删除这项</string>
+    <string name="title2">关于</string>
 </resources>
